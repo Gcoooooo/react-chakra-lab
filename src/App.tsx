@@ -23,44 +23,56 @@ import { PhoneIcon, AddIcon, WarningIcon } from '@chakra-ui/icons'
 
 export const App = () => (
   <ChakraProvider theme={theme}>
-    <Flex minH="100vh" justify="center" align="center" borderRadius="md" >
-      <VStack p="5" w="" bgGradient="linear(to-t, gray.200, whit.500)" shadow="md" borderWidth="1px" borderRadius="md">
-        <Text bgGradient="linear(to-l, #7928CA, #FF0080)"
-          bgClip="text"
-          fontSize="3xl"
-          fontWeight="extrabold">
-          Sign in to SPBlog
-        </Text>
-        <Box p="2" bg="blue.500"  shadow="dark-lg" rounded="md">
-          <FormControl p="10" id="userName">
+    <Flex
+      minH="100vh"
+      mt="20"
+      justify="center"
+      align="flex-start"
+      borderRadius="md">
+      <VStack
+        borderRadius="sm"
+        p="3">
+        <Box
+          p="2"
+          textAlign="center"
+          w="320px">
+          <Text
+            fontSize="2xl"
+            fontWeight="thin"
+          >
+            Sign in to SPBlog
+          </Text>
+        </Box>
+        <Box
+          p="2"
+          borderWidth="1px"
+          borderRadius="md" 
+          w="320px" align="center">
+          <FormControl
+            id="userName" p="2">
             <FormLabel>UserName</FormLabel>
             <Input type="email" />
           </FormControl>
-          <FormControl p="10" id="password">
+          <FormControl
+            id="password" p="2">
             <FormLabel>Password</FormLabel>
             <Input type="password" />
           </FormControl>
-        </Box>
-        <Center p="2" bg="orange.500" >
-          <FormControl id="password">
-            <FormLabel>Password</FormLabel>
-            <Input type="password" />
-          </FormControl>
-        </Center>
-        <Button
-            mt={4}
-            colorScheme="teal"
-            type="submit"
-          >
-            Submit
-          </Button>
+          
           <Button
-            mt={4}
-            colorScheme="teal"
-            type="submit"
+            // isLoading
+            // loadingText="Submitting"
+            colorScheme="green"
+            type="submit" 
+            w="230px"
+            p="2"
           >
-            Submit
+            Login in
           </Button>
+     
+        </Box>
+        
+
       </VStack>
     </Flex>
     {/* <Box textAlign="center" fontSize="xl" bgGradient="linear(to-l, gray.200, pink.500)" >
